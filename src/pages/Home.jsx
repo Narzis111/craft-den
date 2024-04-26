@@ -1,23 +1,34 @@
+import { useLoaderData } from "react-router-dom";
 import Carousal from "../components/Carousal/Carousal";
+import { useState } from "react";
+import AllItems from "../components/AllItems/AllItems";
+
 
 const Home = () => {
+    const loadedItems = useLoaderData();
+    const [items, setItems] = useState(loadedItems);
     return (
         <div>
-          <Carousal></Carousal>
-          <div>
-                <h2 className="text-center lg:text-3xl text-xl font-bold hover:animate-heartBeat-2s transition-transform mt-24">Estates Corner</h2>
-                <p className="max-w-[750px] hover:animate-flash-2s text-center mx-auto py-6">Skyline Realty is dedicated to providing exceptional estates that redefine luxury living. Our portfolio boasts a diverse range of meticulously curated properties, each crafted with the highest standards of design, quality, and innovation. </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <Carousal></Carousal>
+            <div>
+                <h1>Total Items in the Database: {loadedItems.length}</h1>
+                <div className='grid md:grid-cols-2 gap-4'>
 
 
-                    {/* {
-                        assets.map(asset => <SingleCard
-                            key={asset.id}
-                            asset={asset}></SingleCard>)
-                    } */}
+                    {
+                        items.slice(0, 6).map(item => <AllItems
+                            key={item._id}
+                            item={item}
+                            items={items}
+                            setItems={setItems}
+
+                        ></AllItems>)
+                    }
                 </div>
-
             </div>
+
+
+
         </div>
     );
 };

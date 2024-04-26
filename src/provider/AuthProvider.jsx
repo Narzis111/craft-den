@@ -27,12 +27,13 @@ const AuthProvider = ({ children }) => {
 
 
     //  update user profile
-     const updateUserProfile = (displayName, photoURL) => {
+     const updateUserProfile = (displayName, email, photoURL) => {
         setLoading(true);
         return updateProfile(auth.currentUser, {
             displayName,
-            photoURL
-          })
+            photoURL,
+            email
+                      })
         }
            
 

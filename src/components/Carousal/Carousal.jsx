@@ -1,8 +1,7 @@
 import img12 from "../../assets/1.webp";
 import img11 from "../../assets/2.webp";
-import img13 from "../../assets/beautiful-handmade-quilt-bright-colors-600nw-1659758269.webp";
-
-
+import img13 from "../../assets/7008615_CD_25752_2000w-2000-9b65439c9d44418bb8879a038b9b4b4e.jpg";
+import SimpleTypewriter from "react-simple-typewriter";
 const Carousal = () => {
     return (
 
@@ -36,6 +35,7 @@ const Carousal = () => {
 
             <div className="absolute rounded-lg lg:max-w-[1180px] bg-[#000000b3] max-w-[280px] p-6 lg:top-0 md:top-40 top-0 left-20 md:max-w-[750px] md:mx-auto lg:left-0 lg:right-0 transform translate-y-full md:left-8 md:right-8 px-2 md:py-10">
                 <h1 className="text-white text-xl mb-3 md:text-3xl text-center font-semibold hover:animate-flash-2s">Crafted to Smile</h1>
+                
                 <div className="flex justify-center gap-3 flex-col md:flex-row items-center text-center">
 
                     <div>
