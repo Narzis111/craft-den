@@ -21,11 +21,10 @@ const Navbar = () => {
             <div className="navbar-center hidden gap-2 lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li><NavLink to="/">Home</NavLink></li>
-                    <li><NavLink to="/craft">Craft Items</NavLink></li>
-                    <li><NavLink to="/item/add">Add Crafts</NavLink></li>
-                    <li><NavLink to="/myCart">My Art&Craft</NavLink></li>
-                    <li><NavLink to="/blog">Blog</NavLink></li>
-                    <li><NavLink to="/about">About Us</NavLink></li>
+                    <li><NavLink to="/item/table">All Art & Craft Items</NavLink></li>
+                    <li><NavLink to="/item/add">Add Craft Item</NavLink></li>
+                    <li><NavLink to="/myCart">My Art&Craft List</NavLink></li>
+                   
                 </ul>
             </div>
 
