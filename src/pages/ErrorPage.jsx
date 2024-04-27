@@ -8,7 +8,7 @@ const ErrorPage = () => {
     <>
       <Helmet>
         <title>
-          | error
+        CraftDEN|Error
         </title>
       </Helmet>
       <section className='bg-white '>

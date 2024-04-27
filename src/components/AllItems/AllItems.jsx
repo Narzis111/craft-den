@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
-// import Swal from 'sweetalert2'
-const AllItems = ({ item, items, setItems }) => {
+import PropTypes from 'prop-types'
+
+
+const AllItems = ({ item }) => {
 
     const {
         _id,
@@ -38,3 +40,8 @@ const AllItems = ({ item, items, setItems }) => {
 };
 
 export default AllItems;
+AllItems.propTypes = {
+    item: PropTypes.object,
+    items: PropTypes.object,
+    setItem: PropTypes.array,
+  }

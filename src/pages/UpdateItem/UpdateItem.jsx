@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -68,6 +69,12 @@ const UpdateItem = () => {
     }
         
           return (
+            <>
+            <Helmet>
+              <title>
+                CraftDEN|Update
+              </title>
+            </Helmet>
             <div className="gadgetContainer pt-10">
               <div className="shadow-lg p-5 border dark:bg-[#1a2641d5]">
                 <div className="mt-5 mb-8">
@@ -202,6 +209,7 @@ const UpdateItem = () => {
               </div>
              
             </div>
+            </>
           );
         };
 

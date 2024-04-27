@@ -1,7 +1,7 @@
 import img12 from "../../assets/1.webp";
 import img11 from "../../assets/2.webp";
 import img13 from "../../assets/7008615_CD_25752_2000w-2000-9b65439c9d44418bb8879a038b9b4b4e.jpg";
-import SimpleTypewriter from "react-simple-typewriter";
+
 const Carousal = () => {
     return (
 

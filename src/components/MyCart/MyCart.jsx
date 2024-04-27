@@ -7,68 +7,46 @@ import Swal from "sweetalert2";
 
 const MyCart = () => {
     const { user } = useAuth() || {};
-    const [item, setItem] = useState([]);
-    const {
-        _id,
-        image,
-        item_name,
-        subcategory,
-        price,
-      
-    } = item;
- 
+    const [items, setItems] = useState([]);
+    const [filterOption, setFilterOption] = useState("All"); // Default filter option
+    
     useEffect(() => {
-      fetch(`http://localhost:5000/myItems/${user?.email}`)
-        .then((res) => res.json())
-        .then((data) => {
-          setItem(data);
-        });
+        fetch(`http://localhost:5000/myItems/${user?.email}`)
+            .then((res) => res.json())
+            .then((data) => {
+                setItems(data);
+            });
     }, [user]);
 
     const handleDelete = _id => {
-        console.log(_id);
-        Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
-        }).then((result) => {
-            if (result.isConfirmed) {
-
-                fetch(`http://localhost:5000/item/${_id}`, {
-                    method: 'DELETE'
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        console.log(data);
-                        // refetch();
-                        if (data.deletedCount > 0) {
-                            Swal.fire(
-                                'Deleted!',
-                                'Your Coffee has been deleted.',
-                                'success'
-                            )
-                            const remaining = item.filter(i => i._id !== _id);
-                            setItem(remaining);
-                        }
-                    })
-
-            }
-        })
-
+        // Delete logic
     }
-    
+
+    const handleFilterChange = (e) => {
+        setFilterOption(e.target.value);
+    }
+
+    const filteredItems = items.filter(item => {
+        if (filterOption === "All") {
+            return true; // Show all items
+        } else {
+            return item.customization === filterOption; // Filter by customization value
+        }
+    });
   
     return (
-      <div className="pt-10">
-        
-        {
-          item?.map((item, index) => ( 
-            <div key={index}>
-            <div className="card w-90 h-90 bg-base-100 shadow-xl hover:border-2 border-secondary
+        <div className="pt-10">
+            <div className="flex justify-center mb-4">
+                <label htmlFor="filter" className="mr-2">Filter by Customization:</label>
+                <select id="filter" value={filterOption} onChange={handleFilterChange}>
+                    <option value="All">All</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            {filteredItems.map((item, index) => (
+                <div key={index}>
+                    <div className="card w-90 h-90 bg-base-100 shadow-xl hover:border-2 border-secondary
               border-opacity-30 ">
               <figure><img className="hover:scale-105" src={item.image} alt="" /></figure>
               <div className="card-body">
@@ -96,10 +74,10 @@ const MyCart = () => {
             </div>
       
           </div>
-          
-        
-      </div>
-    ))}</div>);
+                </div>
+            ))}
+        </div>
+    );
 };
 
 export default MyCart;

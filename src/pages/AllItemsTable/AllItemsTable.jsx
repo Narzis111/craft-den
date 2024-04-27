@@ -5,16 +5,10 @@ const AllItemsTable = () => {
 
     const loadedItems = useLoaderData();
     const [item, setItem] = useState(loadedItems);
-    // const {
-    //     _id,
-    //     item_name,
-    //     subcategory,
-    //     price,
-      
-    // } = item;
-console.log(item);
 
-     return (
+    console.log(item);
+
+    return (
         <div className="card card-side bg-base-100">
             <h1 className="">loader: {loadedItems.length}</h1>
             <div className="overflow-x-auto mx-auto">
@@ -32,13 +26,13 @@ console.log(item);
                     <tbody>
                         {
                             item.map((i, index) => <tr key={i._id}>
-                                <th>{index+1}</th>
+                                <th>{index + 1}</th>
                                 <td>{i.item_name}</td>
                                 <td>{i.subcategory}</td>
                                 <td>{i.price}</td>
                                 <td>
-                                <Link to={`/item/${i._id}`}><button className="btn">View Details</button>
-                </Link>
+                                    <Link to={`/item/${i._id}`}><button className="btn">View Details</button>
+                                    </Link>
                                 </td>
                             </tr>)
                         }
