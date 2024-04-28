@@ -1,9 +1,12 @@
-import img12 from "../../assets/1.webp";
+// import { Swiper } from "swiper/react";
 import img11 from "../../assets/2.webp";
+import img12 from "../../assets/Printed-Bed-Set.jpg";
 import img13 from "../../assets/7008615_CD_25752_2000w-2000-9b65439c9d44418bb8879a038b9b4b4e.jpg";
 
 const Carousal = () => {
-    return (
+   
+ return(         
+<>
 
         <div className="carousel w-full mt-5 z-10">
             <div id="slide1" className="carousel-item relative w-full h-[400px]">
@@ -33,7 +36,7 @@ const Carousal = () => {
                 </div>
             </div>
 
-            <div className="absolute rounded-lg lg:max-w-[1180px] bg-[#000000b3] max-w-[280px] p-6 lg:top-0 md:top-40 top-0 left-20 md:max-w-[750px] md:mx-auto lg:left-0 lg:right-0 transform translate-y-full md:left-8 md:right-8 px-2 md:py-10">
+            <div className="absolute rounded-lg lg:max-w-[1180px] max-w-[280px] p-6 lg:top-0 md:top-40 top-0 left-20 md:max-w-[750px] md:mx-auto lg:left-0 lg:right-0 transform translate-y-full md:left-8 md:right-8 px-2 md:py-10">
                 <h1 className="text-white text-xl mb-3 md:text-3xl text-center font-semibold hover:animate-flash-2s">Crafted to Smile</h1>
                 
                 <div className="flex justify-center gap-3 flex-col md:flex-row items-center text-center">
@@ -64,11 +67,24 @@ const Carousal = () => {
                 </div>
             </div>
 
-        </div>
-
+        </div></>
 
 
     );
 };
 
 export default Carousal;
+
+{/* <Swiper
+                    spaceBetween={50}
+                    slidesPerView={3}
+                    loop={true}
+                    pagination={{ clickable: true }}
+                    navigation={true}
+                    className="mySwiper"
+                >
+                    <SwiperSlide>Slide 1</SwiperSlide>
+                    <SwiperSlide>Slide 2</SwiperSlide>
+                    <SwiperSlide>Slide 3</SwiperSlide>
+                    {/* Add more SwiperSlides as needed */}
+               

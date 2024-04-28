@@ -32,6 +32,7 @@ const ViewDetail = () => {
             <h1>ami aasi view detail: {stockStatus}</h1>
             <h1>ami aasi view detail: {rating}</h1>
             <h1>ami aasi view detail: {customization}</h1>
+            <h1>ami aasi view detail: {subcategory}</h1>
         </div>
     );
 };

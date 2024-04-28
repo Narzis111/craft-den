@@ -1,7 +1,4 @@
-import {
-  createBrowserRouter,
-
-} from "react-router-dom";
+import {createBrowserRouter} from "react-router-dom";
 import Root from "../layout/Root";
 import ErrorPage from "../pages/ErrorPage";
 import Home from "../pages/Home";
@@ -13,6 +10,9 @@ import AddCraftItems from "../pages/AddCraftItems/AddCraftItems";
 import AllItemsTable from "../pages/AllItemsTable/AllItemsTable";
 import MyCart from "../components/MyCart/MyCart";
 import UpdateItem from "../pages/UpdateItem/UpdateItem";
+import Category from "../Category/Category";
+import DetailCat from "../pages/DetailCat/DetailCat";
+
 
 const router = createBrowserRouter([
   {
@@ -48,6 +48,15 @@ const router = createBrowserRouter([
       {
         path: "/myCart",
         element: <PrivateRoutes><MyCart></MyCart></PrivateRoutes>
+      },
+      {
+        path: "/category",
+        element: <Category></Category>,
+      },
+      {
+        path: "/category/:catID",
+        element: <DetailCat></DetailCat>,
+        loader: (params)=> fetch(`http://localhost:5000/category/${params.catID}`)
       },
 
 
