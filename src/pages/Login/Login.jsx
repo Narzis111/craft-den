@@ -54,7 +54,7 @@ const Login = () => {
     return (
         <>
            <Helmet>
-                <title>Skyline | Login</title>
+                <title>CraftDEN | Login</title>
              </Helmet>
             <div className="hero min-h-screen lg:mb-10">
                 <div className="hero-content flex-col lg:flex-row">

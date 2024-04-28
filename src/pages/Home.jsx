@@ -7,6 +7,7 @@ import About from "../components/About/About";
 import Contact from "../components/Contact/Contact";
 import Category from "../components/Category/Category";
 import { Fade } from "react-reveal";
+import { Helmet } from "react-helmet-async";
 
 
 const Home = () => {
@@ -15,6 +16,10 @@ const Home = () => {
 
 
     return (
+        <>
+        <Helmet>
+            <title>CraftDEN|Home</title>
+        </Helmet>
         <div>
             <Carousal></Carousal>
             <div>
@@ -25,16 +30,12 @@ const Home = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
 
-
-
                 {
                     items.slice(0, 6).map(item => <AllItems
                         key={item._id}
                         item={item}
                         items={items}
-                        setItems={setItems}
-
-                    ></AllItems>)
+                        setItems={setItems}></AllItems>)
                 }
 
             </div>
@@ -51,7 +52,7 @@ const Home = () => {
 
 
 
-        </div>
+        </div></>
     );
 };
 

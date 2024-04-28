@@ -4,6 +4,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { BiHomeAlt2 } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const MyCart = () => {
   const { user } = useAuth() || {};
@@ -66,6 +67,10 @@ const MyCart = () => {
   });
 
   return (
+    <>
+    <Helmet>
+      <title>CraftDEN|MyCart</title>
+    </Helmet>
     <div className="pt-10">
       <div className="flex justify-center mb-4">
         <label htmlFor="filter" className="mr-2">Filter by Customization:</label>
@@ -77,37 +82,32 @@ const MyCart = () => {
       </div>
       {filteredItems.map((item, index) => (
         <div key={index}>
-          <div className="card w-90 h-90 bg-base-100 shadow-xl hover:border-2 border-secondary
-              border-opacity-30 ">
-            <figure><img className="hover:scale-105" src={item.image} alt="" /></figure>
-            <div className="card-body">
-              <h2 className="card-title hover:underline text-md font-bold">
-                {item.item_name}
-                <div className="badge bg-blue-600 text-white p-3">{item.subcategory}</div>
-              </h2>
-              <p>{item.shortDescription}</p>
-              <div className="card-actions justify-between hover:bg-blue-500 hover:py-3">
-                <div className="badge border-none"><span><IoLocationOutline></IoLocationOutline></span>{item.customization}</div>
-                <div className="badge border-none"><span><BiHomeAlt2></BiHomeAlt2></span>{item.rating}</div>
-
-
-              </div>
-
-
-
-              <div className="items-center card-actions flex">
-                <p>Price: {item.price}</p>
-                <Link to={`/updateItem/${item._id}`}><button>Update</button></Link>
-                <button onClick={() => handleDelete(item._id)}>Delete</button>
+          <div className="card card-side bg-base-100 shadow-xl mb-4 border-2 border-purple-400">
+  <div className="w-[400px] h-[300px] p-6">
+  <img className="w-full h-full" src={item.image}/>
+  </div>
+  <div className="card-body">
+    <h2 className="card-title">{item.item_name}</h2>
+    <h2 className="card-title">{item.category}</h2>
+    <p>Product Detail: {item.shortDescription}</p>
+    <p>Rating: {item.rating}</p>
+    <p>Total Time Required: {item.processing_time}</p>
+    <div className="card-actions justify-end">
+     <button className="btn btn-primary">Add to Cart</button>
+    </div>
+    <div className="items-center card-actions flex">
+                <p className="font-bold">Price: $ {item.price}</p>
+                <Link to={`/updateItem/${item._id}`}><button className="bg-purple-600 p-4 rounded-md text-white">Update</button></Link>
+                <button className="bg-red-600 p-4 rounded-md text-white" onClick={() => handleDelete(item._id)}>Delete</button>
 
               </div>
-
-            </div>
-
-          </div>
+  </div>
+</div>
         </div>
       ))}
     </div>
+    </>
+    
   );
 };
 

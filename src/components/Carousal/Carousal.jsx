@@ -1,6 +1,6 @@
-import img11 from "../../assets/2.webp";
+import img11 from "../../assets/3a3db8030a77d4ee636cb5f036768802.jpg";
 import img12 from "../../assets/Printed-Bed-Set.jpg";
-import img13 from "../../assets/7008615_CD_25752_2000w-2000-9b65439c9d44418bb8879a038b9b4b4e.jpg";
+import img13 from "../../assets/2.webp";
 import { Zoom } from "react-reveal";
 
 const Carousal = () => {
@@ -9,28 +9,28 @@ const Carousal = () => {
 <>
 
         <div className="carousel w-full mt-5 z-10">
-            <div id="slide1" className="carousel-item relative w-full h-[400px]">
+            <div id="slide1" className="carousel-item relative w-full h-[500px]">
                 <img src={img11} className="w-full rounded-lg object-cover" />
-                <div className="absolute flex justify-center bottom-0 left-1/2">
+                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide3" className="btn btn-circle">❮</a>
                     <a href="#slide2" className="btn btn-circle">❯</a>
                 </div>
             </div>
 
-            <div id="slide2" className="carousel-item relative w-full h-[400px]">
+            <div id="slide2" className="carousel-item relative w-full h-[500px]">
                 <img src={img12} className="w-full object-cover rounded-lg" />
-                <div className="absolute flex justify-center bottom-0 left-1/2">
+                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide1" className="btn btn-circle">❮</a>
                     <a href="#slide3" className="btn btn-circle">❯</a>
                 </div>
             </div>
 
-            <div id="slide3" className="carousel-item relative w-full h-[400px]">
+            <div id="slide3" className="carousel-item relative w-full h-[500px]">
                 
                 <img src={img13} className="w-full h-full object-cover rounded-lg" />
                 
                     
-                    <div className="absolute flex justify-center bottom-0 left-1/2">
+                    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide2" className="btn btn-circle">❮</a>
                     <a href="#slide1" className="btn btn-circle">❯</a>
                 </div>

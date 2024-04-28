@@ -8,15 +8,9 @@ const AllItems = ({ item }) => {
         _id,
         image,
         item_name,
-        subcategory,
-        shortDescription,
         price,
-        rating,
-        customization,
-        processing_time,
-        stockStatus,
-        userName,
-        email,
+        rating, stockStatus,
+       
     } = item;
 
 
