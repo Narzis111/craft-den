@@ -10,7 +10,7 @@ import AddCraftItems from "../pages/AddCraftItems/AddCraftItems";
 import AllItemsTable from "../pages/AllItemsTable/AllItemsTable";
 import MyCart from "../components/MyCart/MyCart";
 import UpdateItem from "../pages/UpdateItem/UpdateItem";
-import Category from "../Category/Category";
+import Category from "../components/Category/Category";
 import DetailCat from "../pages/DetailCat/DetailCat";
 
 

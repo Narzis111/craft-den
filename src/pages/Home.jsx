@@ -5,7 +5,7 @@ import AllItems from "../components/AllItems/AllItems";
 import Zoom from 'react-reveal/Zoom';
 import About from "../components/About/About";
 import Contact from "../components/Contact/Contact";
-import Category from "../Category/Category";
+import Category from "../components/Category/Category";
 import { Fade } from "react-reveal";
 
 
