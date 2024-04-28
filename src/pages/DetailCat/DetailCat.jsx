@@ -12,13 +12,13 @@ const DetailCat = () => {
         <h1>Category length: {catItems.length}</h1>
   
        
-        {/* {catItems.map((item) => (
+        {catItems.map((item) => (
             <div key={item._id}>
                 <img src={item.image} alt="" />
                 <h3>{item.item_name}</h3>
                 <p>{item.category}</p>
             </div>
-        ))} */}
+        ))}
     </div>
       
     );

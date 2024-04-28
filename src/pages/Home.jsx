@@ -15,11 +15,11 @@ const Home = () => {
       
     return (
         <div>
-            <Carousal></Carousal>
+            {/* <Carousal></Carousal> */}
             <div>
           
             
-              <Zoom><h1 className="">
+              {/* <Zoom><h1 className="">
             
          Total Items
         </h1></Zoom>
@@ -36,7 +36,7 @@ const Home = () => {
 
                         ></AllItems>)
                     }
-                </div>
+                </div> */}
             </div>
             <Category></Category>
             <About></About>
