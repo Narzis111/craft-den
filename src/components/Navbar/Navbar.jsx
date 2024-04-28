@@ -2,10 +2,19 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
     const { user, logOut } = useAuth();
    
+    const handleLogOut = () => {
+      logOut()
+        .then((result) => {
+          toast.success("successfully Logout")
+          console.log(result.user);
+    })
+        .catch((err) => toast.error(err));
+    };
     const [showTooltip, setShowTooltip] = useState(false);
     const [theme, setTheme] = useState('light');
 
@@ -76,7 +85,7 @@ const Navbar = () => {
                     </div>
                 )}
             </div>
-            <button className="btn btn-sm text-white hover:text-black bg-red-600 ml-2" onClick={logOut}>Log Out</button>
+            <button onClick={() => handleLogOut()} className="btn btn-sm text-white hover:text-black bg-red-600 ml-2">Log Out</button>
         </div>
     ) : (
         <Link to='/login'>

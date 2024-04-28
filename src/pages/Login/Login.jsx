@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async";
 import useAuth from '../../hooks/useAuth';
 import SocialLogin from '../../components/SocialLogin/SocialLogin';
+import log from '../../assets/images (18).jpeg';
 
 
 const Login = () => {
@@ -59,7 +60,7 @@ const Login = () => {
             <div className="hero min-h-screen lg:mb-10">
                 <div className="hero-content flex-col lg:flex-row">
                     <div className="text-center lg:text-left rounded-xl">
-                        <img className='w-full h-full object-cover' src="https://i.ibb.co/3Mgd7rP/grant-lemons-j-TCLppdw-SEc-unsplash.jpg" alt="" />
+                        <img className='w-full h-full object-cover' src={log} alt="" />
                     </div>
 
                     <div className="card border-2 border-blue-500 flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
