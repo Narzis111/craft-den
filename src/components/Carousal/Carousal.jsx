@@ -1,6 +1,7 @@
 import img11 from "../../assets/2.webp";
 import img12 from "../../assets/Printed-Bed-Set.jpg";
 import img13 from "../../assets/7008615_CD_25752_2000w-2000-9b65439c9d44418bb8879a038b9b4b4e.jpg";
+import { Zoom } from "react-reveal";
 
 const Carousal = () => {
    
@@ -35,17 +36,13 @@ const Carousal = () => {
                 </div>
             </div>
 
-            <div className="absolute rounded-lg lg:max-w-[400px] p-6 bg-black lg:top-0 md:top-40 top-0 left-20 md:max-w-[750px] md:mx-auto lg:left-0 lg:right-0 transform translate-y-full">
-                <h1 className="text-white text-xl mb-3 md:text-3xl text-center font-semibold hover:animate-flash-2s">Crafted to Smile</h1>
-                
-                <div className="flex justify-center gap-3 flex-col md:flex-row items-center text-center">
+                      
+            <div className="absolute p-6 lg:top-0 md:top-0 top-0 left-20 md:max-w-[750px] md:mx-auto lg:left-0 lg:right-0 transform translate-y-full">
+                <Zoom><h1 className="text-7xl bg-slate-100 rounded-xl p-0 text-purple-600 text-center font-extrabold hover:animate-flash-2s">Crafted to Smile</h1>
+                 </Zoom>
+                <div className="justify-center mt-5 gap-3 flex-col md:flex-row items-center text-center">
 
-                    <div>
-                        <label className="input input-bordered rounded-none flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="rounded-lg w-6 h-6 text-orange-600"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg>
-                            <input type="text" className="grow" placeholder="Search your wish" />
-                        </label>
-                    </div>
+                    <button className="bg-purple-600 px-4 py-3 rounded-full text-white">Explore Us</button>
 
                     
 
@@ -60,16 +57,4 @@ const Carousal = () => {
 
 export default Carousal;
 
-{/* <Swiper
-                    spaceBetween={50}
-                    slidesPerView={3}
-                    loop={true}
-                    pagination={{ clickable: true }}
-                    navigation={true}
-                    className="mySwiper"
-                >
-                    <SwiperSlide>Slide 1</SwiperSlide>
-                    <SwiperSlide>Slide 2</SwiperSlide>
-                    <SwiperSlide>Slide 3</SwiperSlide>
-                    {/* Add more SwiperSlides as needed */}
                

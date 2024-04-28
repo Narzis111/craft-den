@@ -23,17 +23,20 @@ const AllItems = ({ item }) => {
   
 
     return (
-        <div className="card card-side bg-base-100 shadow-xl">
-            <figure><img src={image} alt="Item" /></figure>
-            <div className="flex justify-between w-full pr-4">
-                <div>
-                    <h2 className="card-title">Name: {item_name}</h2>
-                    <p>{price}</p>
-                    <p>{stockStatus}</p>
-                    <p>{rating}</p>
-                </div>
-                <Link to={`/item/${_id}`}><button className="btn">View Details</button>
+        <div className="card card-side bg-base-100 shadow-xl border-2 border-slate-300 hover:border-secondary">
+            <div className="w-[400px] p-4">
+            <img className='w-full h-full object-fit hover:scale-105' src={image} alt="Item" />
+            </div>
+            <div className="flex justify-between w-full p-4">
+                <div className='space-y-2'>
+                    <h2 className="card-title hover:underline">Name: {item_name}</h2>
+                    <p>Price: <span className='font-bold'>$ {price}</span></p>
+                    <p>Availability: {stockStatus}</p>
+                    <p>Rating: {rating}</p>
+                    <Link to={`/item/${_id}`}><button className="btn mt-2 bg-purple-600">View Details</button>
                 </Link>
+                </div>
+            
             </div>
         </div>
     );
