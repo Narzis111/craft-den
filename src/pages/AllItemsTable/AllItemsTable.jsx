@@ -8,7 +8,7 @@ const AllItemsTable = () => {
     const loadedItems = useLoaderData();
     const [item, setItem] = useState(loadedItems);
 
-    console.log(item);
+    console.log(item,setItem );
 
     return (
         <>

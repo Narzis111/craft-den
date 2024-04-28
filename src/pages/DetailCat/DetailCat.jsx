@@ -1,11 +1,10 @@
-// import { useEffect, useState } from "react";
 import { Fade, Zoom } from "react-reveal";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 
 const DetailCat = () => {
     const catItems = useLoaderData();
     const { catID } = useParams();
-    console.log(catItems);
+    console.log(catID, catItems);
 
     return (
         <div>

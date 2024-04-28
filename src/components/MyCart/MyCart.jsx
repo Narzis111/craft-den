@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
-import { IoLocationOutline } from "react-icons/io5";
-import { BiHomeAlt2 } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
@@ -12,7 +10,7 @@ const MyCart = () => {
   const [filterOption, setFilterOption] = useState("All");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myItems/${user?.email}`)
+    fetch(`https://y-iwokcgsfg-narzis-nahars-projects.vercel.app/myItems/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setItems(data);
@@ -31,7 +29,7 @@ const MyCart = () => {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-         fetch(`http://localhost:5000/item/${_id}`, {
+         fetch(`https://y-iwokcgsfg-narzis-nahars-projects.vercel.app/item/${_id}`, {
           method: 'DELETE'
         })
           .then(res => res.json())

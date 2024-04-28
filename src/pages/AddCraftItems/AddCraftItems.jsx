@@ -33,7 +33,7 @@ const AddCraftItems = () => {
       email,
     };
 
-    fetch("http://localhost:5000/item", {
+    fetch("https://y-iwokcgsfg-narzis-nahars-projects.vercel.app/item", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(info),
