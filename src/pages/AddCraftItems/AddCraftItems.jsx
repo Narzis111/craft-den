@@ -33,7 +33,7 @@ const AddCraftItems = () => {
       email,
     };
 
-    fetch("https://y-iwokcgsfg-narzis-nahars-projects.vercel.app/item", {
+    fetch("http://localhost:5000/item", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(info),
@@ -63,7 +63,7 @@ const AddCraftItems = () => {
             </p>
           </div>
           <form onSubmit={handleAddProduct}>
-            <div className="flex gap-8">
+            <div className="flex gap-8 lg:flex-row flex-col">
               <div className="flex-1">
                 <label className="block mb-2 dark:text-white" htmlFor="image">
                   Image URL

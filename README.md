@@ -32,11 +32,11 @@ Welcome to CraftDEN, your ultimate destination for textile artistry! Dive into a
 - [TailwindCSS](https://tailwindcss.com/)
 - [React-Helmet-async](https://www.npmjs.com/package/react-helmet-async)
 - [Firebase Authentication](https://firebase.google.com/)
-- Node.js
-- Express.js
-- MongoDB
-- react-awesome-reveal
-- Lottie React
+- [Node.js]
+- [Express.js]
+- [MongoDB]
+- [react-awesome-reveal]
+- [Lottie React]
 
 
 ## Feedback

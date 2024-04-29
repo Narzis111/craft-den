@@ -3,8 +3,8 @@ import { Link, useLoaderData, useParams } from "react-router-dom";
 
 const DetailCat = () => {
     const catItems = useLoaderData();
-    const { catID } = useParams();
-    console.log(catID, catItems);
+    const { id } = useParams();
+    console.log(id, catItems);
 
     return (
         <div>
@@ -20,7 +20,7 @@ const DetailCat = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
                 {catItems.map((item) => (
-                    <div key={item._id}>
+                    <div key={id}>
                         <div className="card card-side bg-base-100 shadow-xl mb-4 border-2 border-purple-400">
                             <div className="w-[400px] h-[300px] p-6">
                                 <img className="w-full h-full" src={item.image} />

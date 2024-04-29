@@ -5,7 +5,7 @@ const Category = () => {
   const [allCategory, setAllCategory] = useState([]);
 
   useEffect(() => {
-    fetch(`https://y-iwokcgsfg-narzis-nahars-projects.vercel.app/category`)
+    fetch(`http://localhost:5000/category`)
       .then((res) => res.json())
       .then((data) => {
         setAllCategory(data);
@@ -19,7 +19,7 @@ const Category = () => {
  
         {allCategory.slice(0, 6).map((aCat) => (
           <div key={aCat._id}>
-            <Link to={`/category/${aCat.catID}`}>
+            <Link to={`/category/${aCat._id}`}>
             <div className="card bg-base-100 w-96  shadow-xl border-2 border-slate-300 hover:border-secondary">
             <div className="h-[400px] p-4">
             <img className='w-full h-full object-fit hover:scale-105' src={aCat.image} alt="Item" />

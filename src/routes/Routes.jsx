@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('https://y-iwokcgsfg-narzis-nahars-projects.vercel.app/item'),
+        loader: () => fetch('http://localhost:5000/item'),
       },
       {
         path: "/item/add",
@@ -32,17 +32,17 @@ const router = createBrowserRouter([
       {
         path: "/item/table",
         element:<AllItemsTable></AllItemsTable>,
-        loader: () => fetch(`https://y-iwokcgsfg-narzis-nahars-projects.vercel.app/item`),
+        loader: () => fetch(`http://localhost:5000/item`),
       },
       {
         path: '/item/:id',
         element: <PrivateRoutes><ViewDetail></ViewDetail></PrivateRoutes>,
-        loader: ({ params }) => fetch(`https://y-iwokcgsfg-narzis-nahars-projects.vercel.app/item/${params.id}`),
+        loader: ({ params }) => fetch(`http://localhost:5000/item/${params.id}`),
       },
       {
         path: "updateItem/:id",
         element: <PrivateRoutes><UpdateItem></UpdateItem></PrivateRoutes>,
-        loader: ({ params }) => fetch(`https://y-iwokcgsfg-narzis-nahars-projects.vercel.app/item/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/item/${params.id}`)
       },
 
       {
@@ -55,9 +55,9 @@ const router = createBrowserRouter([
         
       },
       {
-        path: "/category/:catID",
+        path: "/category/:id",
         element: <DetailCat></DetailCat>,
-        loader: ({params})=> fetch(`https://y-iwokcgsfg-narzis-nahars-projects.vercel.app/category/${params.catID}`)
+        loader: ({params})=> fetch(`http://localhost:5000/category/${params.id}`)
       },
 
 

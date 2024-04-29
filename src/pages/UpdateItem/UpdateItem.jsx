@@ -47,7 +47,7 @@ const UpdateItem = () => {
             console.log(updateItem);
         
         // send data to the server
-        fetch(`https://y-iwokcgsfg-narzis-nahars-projects.vercel.app/item/${_id}`, {
+        fetch(`http://localhost:5000/item/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
