@@ -18,7 +18,7 @@ const Home = () => {
     return (
         <>
         <Helmet>
-            <title>CraftDEN|Home</title>
+            <title>CraftDEN | Home</title>
         </Helmet>
         <div>
             <Carousal></Carousal>
@@ -52,7 +52,8 @@ const Home = () => {
 
 
 
-        </div></>
+        </div>
+        </>
     );
 };
 

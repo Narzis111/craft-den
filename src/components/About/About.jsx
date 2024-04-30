@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+
 import about from "../../assets/curtain-895x1024.jpg"
 import { Bounce, Fade } from 'react-reveal';
 
@@ -7,9 +7,7 @@ const About = () => {
 
     return (
         <div>
-            <Helmet>
-                <title>CraftDEN|About</title>
-            </Helmet>
+            
           
             <div className="hero min-h-screen mt-20">
 

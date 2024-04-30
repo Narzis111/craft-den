@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import useAuth from "../../hooks/useAuth";
+import Swal from "sweetalert2";
 
 const AddCraftItems = () => {
   const { user } = useAuth() || {};
@@ -33,17 +34,24 @@ const AddCraftItems = () => {
       email,
     };
 
-    fetch("http://localhost:5000/item", {
+    fetch("https://y-ten-woad.vercel.app/item", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(info),
     })
       .then((res) => res.json())
-      .then((data) => {
-        if (data?.insertedId) {
-          alert("added to database");
+    
+      .then(data => {
+        console.log(data);
+        if (data?.insertedId > 0) {
+            Swal.fire({
+                title: 'Success!',
+                text: 'Product Added Successfully',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+            })
         }
-      });
+    })
 
   };
 

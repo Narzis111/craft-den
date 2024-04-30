@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async";
 import useAuth from '../../hooks/useAuth';
 import SocialLogin from '../../components/SocialLogin/SocialLogin';
-import log from '../../assets/images (18).jpeg';
+import log from '../../assets/beautiful-seamless-vector-floral-pattern-600nw-2159312503.webp';
 
 
 const Login = () => {
@@ -59,11 +59,11 @@ const Login = () => {
              </Helmet>
             <div className="hero min-h-screen lg:mb-10">
                 <div className="hero-content flex-col lg:flex-row">
-                    <div className="text-center lg:text-left rounded-xl">
-                        <img className='w-full h-full object-cover' src={log} alt="" />
+                    <div className="text-center lg:text-left rounded-xl p-6">
+                        <img className='w-full h-full object-cover rounded-xl' src={log} alt="" />
                     </div>
 
-                    <div className="card border-2 border-blue-500 flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card border-2 border-purple-600 flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -85,7 +85,7 @@ const Login = () => {
                                
                             </div>
                             <div className="form-control mt-6 p-0">
-                                <button className="btn btn-neutral">Login</button>
+                                <button className="btn bg-purple-600">Login</button>
                             </div>
                             <label className="label">
                                 Need to sign up? <Link to="/register" className="label-text-alt link link-hover">Create an account</Link>

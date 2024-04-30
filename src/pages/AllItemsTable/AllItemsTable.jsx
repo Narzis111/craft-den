@@ -13,9 +13,10 @@ const AllItemsTable = () => {
     return (
         <>
         <Helmet>
-            <title>CraftDEN|ItemTable</title>
+            <title>CraftDEN | ItemTable</title>
         </Helmet>
         <div>
+    
                 <Zoom><h2 className="text-center lg:text-5xl text-xl font-bold hover:animate-heartBeat-2s transition-transform mt-24">All Art & Crafts Item Table</h2>
                 </Zoom>
                 <Fade><p className="max-w-[750px] hover:animate-flash-2s text-center mx-auto py-6">Navigating the CraftDEN Gallery is akin to embarking on a virtual journey through bustling marketplaces and serene workshops, where every click unveils a new masterpiece waiting to be explored. </p>

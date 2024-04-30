@@ -47,7 +47,7 @@ const UpdateItem = () => {
             console.log(updateItem);
         
         // send data to the server
-        fetch(`http://localhost:5000/item/${_id}`, {
+        fetch(`https://y-ten-woad.vercel.app/item/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -60,7 +60,7 @@ const UpdateItem = () => {
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: 'Success!',
-                        text: 'Item Updated Successfully',
+                        text: 'Product Updated Successfully',
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })

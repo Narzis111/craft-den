@@ -1,4 +1,4 @@
-import {createBrowserRouter} from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Root from "../layout/Root";
 import ErrorPage from "../pages/ErrorPage";
 import Home from "../pages/Home";
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/item'),
+        loader: () => fetch('https://y-ten-woad.vercel.app/item'),
       },
       {
         path: "/item/add",
@@ -31,18 +31,18 @@ const router = createBrowserRouter([
       },
       {
         path: "/item/table",
-        element:<AllItemsTable></AllItemsTable>,
-        loader: () => fetch(`http://localhost:5000/item`),
+        element: <AllItemsTable></AllItemsTable>,
+        loader: () => fetch(`https://y-ten-woad.vercel.app/item`),
       },
       {
         path: '/item/:id',
         element: <PrivateRoutes><ViewDetail></ViewDetail></PrivateRoutes>,
-        loader: ({ params }) => fetch(`http://localhost:5000/item/${params.id}`),
+        loader: ({ params }) => fetch(`https://y-ten-woad.vercel.app/item/${params.id}`),
       },
       {
         path: "updateItem/:id",
         element: <PrivateRoutes><UpdateItem></UpdateItem></PrivateRoutes>,
-        loader: ({ params }) => fetch(`http://localhost:5000/item/${params.id}`)
+        loader: ({ params }) => fetch(`https://y-ten-woad.vercel.app/item/${params.id}`)
       },
 
       {
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
       {
         path: "/category/:id",
         element: <DetailCat></DetailCat>,
-        
+
       },
       {
         path: "/register",

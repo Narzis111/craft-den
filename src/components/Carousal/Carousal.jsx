@@ -37,8 +37,8 @@ const Carousal = () => {
             </div>
 
                       
-            <div className="absolute p-6 lg:top-0 md:top-0 top-0 left-20 md:max-w-[750px] md:mx-auto lg:left-0 lg:right-0 transform translate-y-full">
-                <Zoom><h1 className="text-7xl bg-slate-100 rounded-xl p-0 text-purple-600 text-center font-extrabold hover:animate-flash-2s">Crafted to Smile</h1>
+            <div className="absolute p-6 lg:top-0 md:top-0 md:left-20 left-10 top-0 md:max-w-[750px] md:mx-auto lg:left-0 lg:right-0 transform translate-y-full">
+                <Zoom><h1 className="text-3xl lg:text-7xl bg-slate-100 rounded-xl p-0 text-purple-600 text-center font-extrabold hover:animate-flash-2s">Crafted to Smile</h1>
                  </Zoom>
                 <div className="justify-center mt-5 gap-3 flex-col md:flex-row items-center text-center">
 

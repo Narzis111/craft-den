@@ -10,7 +10,7 @@ const MyCart = () => {
   const [filterOption, setFilterOption] = useState("All");
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myItems/${user?.email}`)
+    fetch(`https://y-ten-woad.vercel.app/myItems/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setItems(data);
@@ -29,7 +29,7 @@ const MyCart = () => {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-         fetch(`http://localhost:5000/item/${_id}`, {
+         fetch(`https://y-ten-woad.vercel.app/item/${_id}`, {
           method: 'DELETE'
         })
           .then(res => res.json())
