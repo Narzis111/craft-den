@@ -21,7 +21,7 @@ Welcome to CraftDEN, your ultimate destination for textile artistry! Dive into a
 - 404 Page: If you encounter a page that doesn't exist, CraftDEN's custom 404 page will guide you back on track.
 
 ## Challenges Accomplished
-- Used the React hook form and Protected Route: Used the Hook form in Signup and Signin form. Created a protected route where logged-in users can view their profile information.
+- Used the React hook form and Protected Route: Used the react tooltip. Used Hook form in Signup and Signin form. Created a protected route where logged-in users can view their profile information.
 
 
 ## Resources
@@ -36,7 +36,7 @@ Welcome to CraftDEN, your ultimate destination for textile artistry! Dive into a
 - [Express.js]
 - [MongoDB]
 - [react-awesome-reveal]
-- [Lottie React]
+- [React-tooltip]
 
 
 ## Feedback

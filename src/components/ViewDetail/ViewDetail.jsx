@@ -6,10 +6,10 @@ const ViewDetail = () => {
     const item = useLoaderData();
     const { id } = useParams();
 
-    console.log(item, id);
+    console.log({item}, id);
 
     const {
-        _id,
+        
         image,
         item_name,
         subcategory,

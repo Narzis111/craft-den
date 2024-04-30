@@ -39,6 +39,6 @@ const AllItems = ({ item }) => {
 export default AllItems;
 AllItems.propTypes = {
     item: PropTypes.object,
-    items: PropTypes.object,
+    items: PropTypes.array,
     setItem: PropTypes.array,
   }
